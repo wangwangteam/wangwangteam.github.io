@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="matlab," />
 
 
 
@@ -79,16 +79,27 @@
 
 
 
-<meta name="description" content="test">
+<meta name="description" content="今天看到一篇有关车牌识别的文章，就想把自己学到的东西和自己的理解分享一下，不是什么非常具有技术含量的文章，具体的内容就是基于matlab的一个车牌识别项目的大步骤，希望和大家一起互相学习，共同成长。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="test.md">
-<meta property="og:url" content="http://yoursite.com/2020/01/19/test-md/index.html">
+<meta property="og:title" content="浅谈车牌识别">
+<meta property="og:url" content="http://yoursite.com/2017/11/13/%E6%B5%85%E8%B0%88%E8%BD%A6%E7%89%8C%E8%AF%86%E5%88%AB/index.html">
 <meta property="og:site_name" content="computer vision">
-<meta property="og:description" content="test">
-<meta property="article:published_time" content="2020-01-19T08:27:13.000Z">
-<meta property="article:modified_time" content="2020-01-19T08:27:38.340Z">
+<meta property="og:description" content="今天看到一篇有关车牌识别的文章，就想把自己学到的东西和自己的理解分享一下，不是什么非常具有技术含量的文章，具体的内容就是基于matlab的一个车牌识别项目的大步骤，希望和大家一起互相学习，共同成长。">
+<meta property="og:image" content="http://ozalho4ed.bkt.clouddn.com/20170221154319647.png">
+<meta property="og:image" content="http://ozalho4ed.bkt.clouddn.com/20170221154319647.png">
+<meta property="og:image" content="http://ozalho4ed.bkt.clouddn.com/20170221154342115.png">
+<meta property="og:image" content="http://ozalho4ed.bkt.clouddn.com/20170221154403755.png">
+<meta property="og:image" content="http://ozalho4ed.bkt.clouddn.com/20170221154457524.png">
+<meta property="og:image" content="http://ozalho4ed.bkt.clouddn.com/20170221154827904.jpg">
+<meta property="og:image" content="http://ozalho4ed.bkt.clouddn.com/20170221160533022.png">
+<meta property="og:image" content="http://ozalho4ed.bkt.clouddn.com/20170221160510985.png">
+<meta property="og:image" content="http://ozalho4ed.bkt.clouddn.com/20170221160607751.png">
+<meta property="article:published_time" content="2017-11-13T10:39:30.000Z">
+<meta property="article:modified_time" content="2017-11-13T11:07:49.214Z">
 <meta property="article:author" content="郑爽">
+<meta property="article:tag" content="matlab">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://ozalho4ed.bkt.clouddn.com/20170221154319647.png">
 
 
 
@@ -118,13 +129,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/01/19/test-md/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/11/13/浅谈车牌识别/"/>
 
 
 
 
 
-  <title>test.md | computer vision</title>
+  <title>浅谈车牌识别 | computer vision</title>
   
 
 
@@ -231,7 +242,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/19/test-md/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/13/%E6%B5%85%E8%B0%88%E8%BD%A6%E7%89%8C%E8%AF%86%E5%88%AB/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="郑爽">
@@ -248,7 +259,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">test.md</h1>
+          <h1 class="post-title" itemprop="name headline">浅谈车牌识别</h1>
         
 
         <div class="post-meta">
@@ -260,8 +271,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-19T16:27:13+08:00">
-                2020-01-19
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-13T18:39:30+08:00">
+                2017-11-13
               </time>
             
 
@@ -303,8 +314,28 @@
       
 
       
-        <p>test</p>
+        <p>今天看到一篇有关车牌识别的文章，就想把自己学到的东西和自己的理解分享一下，不是什么非常具有技术含量的文章，具体的内容就是基于matlab的一个车牌识别项目的大步骤，希望和大家一起互相学习，共同成长。<br><img src="http://ozalho4ed.bkt.clouddn.com/20170221154319647.png" alt="image"></p>
+<a id="more"></a>
+<h5 id="直奔主题吧。"><a href="#直奔主题吧。" class="headerlink" title="直奔主题吧。"></a>直奔主题吧。</h5><h3 id="1-车牌识别的步骤"><a href="#1-车牌识别的步骤" class="headerlink" title="1. 车牌识别的步骤"></a>1. 车牌识别的步骤</h3><pre><code>1.车牌定位
+2.车牌分割
+3.字符识别</code></pre><p>正如上面所讲,车牌识别主要分为3个部分,其中第一部分车牌定位,一般采用颜色定位,特征定位等,这方面的资料可以自行问百度或者其他论坛等。第二部分车牌分割一般采用投影法.第三步的字符识别，方法就比较多了,有模板匹配,bp神经网络,卷积神经网络等。</p>
+<h3 id="2-一个简单的例子"><a href="#2-一个简单的例子" class="headerlink" title="2.一个简单的例子"></a>2.一个简单的例子</h3><p> 先读取车牌图片<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> [uuu,vvv]&#x3D;uigetfile(&#123;&#39;*.jpg;*.tif;*.png;*.gif;*.BMP;*.JPEG&#39;,&#39;All Image Files&#39;&#125; ,&#39;MultiSelect&#39;, &#39;on&#39;);%获取一张车牌照片</span><br><span class="line"> path&#x3D;strcat(vvv,uuu);%拼接图片路径</span><br><span class="line">img_rgb&#x3D;imread(path);</span><br><span class="line">imshow(img_rgb);title(&#39;原图&#39;);</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://ozalho4ed.bkt.clouddn.com/20170221154319647.png" alt="image"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">%% 开始二值化处理</span><br><span class="line">figure1&#x3D;figure(1);subplot(231);imshow(img_rgb);title(&#39;原图&#39;);</span><br></pre></td></tr></table></figure>
 
+<p><img src="http://ozalho4ed.bkt.clouddn.com/20170221154342115.png" alt="image"></p>
+<p>调用rot_angle子函数,计算图像需要旋转的最佳角度要旋转的最佳角度,返回 后旋转图像.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Angle&#x3D;rot_angle(s_b,6,-6,1)</span><br><span class="line">if Angle~&#x3D;0</span><br><span class="line">s_bw1&#x3D;imrotate(s_bw1,Angle,&#39;nearest&#39;,&#39;crop&#39;);</span><br><span class="line">end</span><br><span class="line">%% % 调用字符分割函数分割处理好的车牌</span><br><span class="line">devide_word&#x3D;devide_word(plate);</span><br></pre></td></tr></table></figure>
+<p><img src="http://ozalho4ed.bkt.clouddn.com/20170221154403755.png" alt="image"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">%% %调用训练好的cnn网络识别车牌</span><br><span class="line">resault&#x3D;recognize(plate_word)</span><br></pre></td></tr></table></figure>
+<p><img src="http://ozalho4ed.bkt.clouddn.com/20170221154457524.png" alt="image"></p>
+<p>上面大体是车牌识别的大概步骤，识别采用卷积神经网络识别，效果最好。训练网络时样本数一定要大。</p>
+<p><img src="http://ozalho4ed.bkt.clouddn.com/20170221154827904.jpg" alt="image"></p>
+<p>别的例子,证明卷积神经网络的优越性。</p>
+<p><img src="http://ozalho4ed.bkt.clouddn.com/20170221160533022.png" alt="image"></p>
+<p><img src="http://ozalho4ed.bkt.clouddn.com/20170221160510985.png" alt="image"></p>
+<p><img src="http://ozalho4ed.bkt.clouddn.com/20170221160607751.png" alt="image"></p>
+<h4 id="车牌识别还有bp神经网络和模板匹配。大家也可以自行去了解一下相关的内容。"><a href="#车牌识别还有bp神经网络和模板匹配。大家也可以自行去了解一下相关的内容。" class="headerlink" title="车牌识别还有bp神经网络和模板匹配。大家也可以自行去了解一下相关的内容。"></a>车牌识别还有bp神经网络和模板匹配。大家也可以自行去了解一下相关的内容。</h4>
       
     </div>
     
@@ -318,6 +349,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/matlab/" rel="tag"># matlab</a>
+          
+        </div>
       
 
       
@@ -343,8 +380,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/01/19/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2017/11/12/%E4%B8%8E%E4%BD%A0%E7%9B%B8%E9%81%87%EF%BC%8C%E7%9C%9F%E7%9A%84%E5%BE%88%E5%A5%87%E5%A6%99/" rel="next" title="与你相遇，真的很奇妙">
+                <i class="fa fa-chevron-left"></i> 与你相遇，真的很奇妙
               </a>
             
           </div>
@@ -352,6 +389,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/11/16/%E6%88%91%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%80%83%E7%A0%94/" rel="prev" title="我为什么不考研">
+                我为什么不考研 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -403,8 +444,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -419,7 +469,7 @@
               
                 <a href="/archives/%20%7C%7C%20archive">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -427,6 +477,15 @@
 
             
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
             
 
           </nav>
@@ -462,6 +521,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#直奔主题吧。"><span class="nav-number">1.</span> <span class="nav-text">直奔主题吧。</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-车牌识别的步骤"><span class="nav-number"></span> <span class="nav-text">1. 车牌识别的步骤</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-一个简单的例子"><span class="nav-number"></span> <span class="nav-text">2.一个简单的例子</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#车牌识别还有bp神经网络和模板匹配。大家也可以自行去了解一下相关的内容。"><span class="nav-number"></span> <span class="nav-text">车牌识别还有bp神经网络和模板匹配。大家也可以自行去了解一下相关的内容。</span></a></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
